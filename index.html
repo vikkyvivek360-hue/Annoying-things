@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 100px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        #noBtn {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Raaji Aa? 🫣</h2>
+
+    <button onclick="yesClicked()">Yes</button>
+    <button id="noBtn" onmouseover="moveButton()">No</button>
+
+    <script>
+        function yesClicked() {
+            document.body.innerHTML = "<h1>Yan Raaji 🫣</h1>";
+        }
+
+        function moveButton() {
+            let btn = document.getElementById("noBtn");
+
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+
+            btn.style.left = x + "px";
+            btn.style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
